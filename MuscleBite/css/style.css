@@ -1,72 +1,150 @@
-body{
-    background-color: #F2F2F2;
-    margin: 0;
+body {
+  background-color: #dedbdb;
+  margin: 0;
 }
-header nav{
-    display: flex;
-    background-color: #F2F2F2;
-    padding: 10px;
-    justify-content: space-between;
-    align-items: center;
+header nav {
+  display: flex;
+  background-color: #bdbcbc;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
-header nav h1{
-    font-size: 30px;
-    font-family:'Franklin Gothic Medium','Gill Sans', 'Gill Sans MT';
-    color: rgb(57, 56, 56);
-    margin: 0;
+header nav h1 {
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Gill Sans", "Gill Sans MT";
+  color: rgb(57, 56, 56);
+  margin: 0;
 }
-header nav ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;    
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
 }
-header nav ul li a{
-    text-decoration: none;
-    color: rgb(46, 46, 46);
-    margin-left: 40px;
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(46, 46, 46);
+  margin-left: 40px;
+  font-size: large;
+}
+header nav ul li a:hover {
+  color: rgb(234, 82, 82);
+}
+.main-photo {
+  background-image: url("../assets/louis-hansel-wVoP_Q2Bg_A-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.7s ease;
+}
+.text:hover {
+  transform: scale(1.1);
+}
+.content .hd {
+  color: wheat;
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+.content .coute {
+  color: wheat;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+.button a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: rgb(216, 215, 138);
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+.button a:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(199, 198, 132);
+}
+.button {
+  margin-top: 30px;
+}
+.content h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  margin-top: 10px;
+  color: #272727;
+}
+.content .best-selling {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+.best-selling div {
+  background-color: #b5b5b4;
+  width: 350px;
+  height: 480px;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.2s ease;
+}
+.best-selling div:hover{
+    transform: translateY(-15px);
+}
+.best-selling div img {
+  width: 100%;
+  border-radius: 10px;
+}
+.best-selling div h2{
+    padding-left: 10px;
+}
+.best-selling div p{
+    padding-left: 10px;
     font-size: large;
 }
-header nav ul li a:hover{
-    color: rgb(234, 82, 82);
+.best-selling div span{
+    color: rgb(102, 30, 30);
+    display: inline-block;
+    padding-top: 20px;
+    padding-left: 15px ;
+    font-size: 25px;
 }
-.main-photo{
-    background-image: url("../assets/louis-hansel-wVoP_Q2Bg_A-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.text{
-    background-color: rgba(0, 0, 0, 0.5);
+.best-selling div a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(132, 46, 46);
     padding: 15px;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
     border-radius: 10px;
 }
-.content .hd{
-    color: wheat;
-    font-size: 50px;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
+.best-selling div a:hover{
+    background-color: rgb(106, 53, 53);
 }
-.content .coute{
-    color: wheat;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 0;
-    padding: 0;
+.content .view-products{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 15px;
+  background-color: rgb(132, 46, 46);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 10%;
+  margin: 30px auto;
 }
-.buttons a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    background-color: rgb(216, 215, 138);
-    padding: 15px 20px;
-    border-radius:5px;
+.content .view-products:hover{
+  background-color: rgb(106, 53, 53);
 }
-.buttons{
-    margin-top: 30px;
-}
+
 
