@@ -19,11 +19,11 @@ header nav ul {
   list-style: none;
   display: flex;
   flex-direction: row;
+  gap: 40px;
 }
 header nav ul li a {
   text-decoration: none;
   color: rgb(46, 46, 46);
-  margin-left: 40px;
   font-size: large;
 }
 header nav ul li a:hover {
@@ -88,6 +88,7 @@ header nav ul li a:hover {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: nowrap;
+  gap: 20px;
 }
 .best-selling div {
   background-color: #b5b5b4;
@@ -132,7 +133,7 @@ header nav ul li a:hover {
 .best-selling div a:hover {
   background-color: rgb(106, 53, 53);
 }
-.content .view-products {
+.view-products {
   color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 15px;
@@ -143,7 +144,7 @@ header nav ul li a:hover {
   width: 10%;
   margin: 30px auto;
 }
-.content .view-products:hover {
+.view-products:hover {
   background-color: rgb(106, 53, 53);
 }
 .content .our-story {
@@ -184,6 +185,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 footer .about {
   width: 30%;
@@ -229,9 +231,194 @@ footer .copy-right {
   text-align: center;
   color: rgb(212, 210, 210);
 }
-footer a:hover {
-  color: rgb(238, 208, 124);
-}
+footer a:hover,
 footer ul li a:hover {
   color: rgb(238, 208, 124);
+}
+/* media queries  home page*/
+@media (max-width: 992px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  .content .best-selling {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .content .our-story {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+  .content .our-story p {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .content .our-story img {
+    position: static;
+    margin: 20px auto;
+    width: 60%;
+  }
+  .content .view-products {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .content .hd {
+    font-size: 30px;
+  }
+  .content .coute {
+    font-size: 16px;
+  }
+  .best-selling div {
+    width: 90%;
+    height: auto;
+  }
+  .content .view-products {
+    width: 60%;
+  }
+  footer {
+    height: auto;
+    padding: 20px 10px;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  footer .about,
+  footer .follow-us {
+    width: 100%;
+  }
+}
+.about-content h1 {
+  margin: 20px;
+  font-size: xx-large;
+  color: black;
+}
+.about-content h1::first-letter {
+  color: rgb(149, 40, 40);
+  font-size: 40px;
+}
+.about-content p {
+  width: 50%;
+  color: #272729;
+  font-size: large;
+  margin-left: 20px;
+  line-height: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.about-content .about-us img {
+  width: 500px;
+  position: absolute;
+  right: 20px;
+  top: 170px;
+  border-radius: 10px;
+}
+.services {
+  margin-top: 50px;
+  background-color: rgb(204, 204, 204);
+  height: auto;
+  padding: 20px;
+}
+.services h1,
+.services p {
+  padding-top: 10px;
+}
+.founder {
+  display: flex;
+  justify-content: center;
+}
+.team {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+.team > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.team img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.team > div h3 {
+  margin-bottom: 0;
+  font-family: "Helvetica Neue", sans-serif;
+}
+.team span {
+  font-size: large;
+  color: rgb(134, 44, 44);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.team p {
+  font-size: small;
+  line-height: 1.5;
+  width: 300px;
+  text-align: center;
+}
+/* media queries  about page */
+@media (max-width: 992px) {
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-content p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about-content .about-us img {
+    position: static;
+    max-width: 80%;
+    margin-top: 20px;
+  }
+  .team {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .about-content h1 {
+    font-size: x-large;
+  }
+  .about-content p {
+    width: 90%;
+    font-size: medium;
+    line-height: 25px;
+  }
+  .about-content .about-us img {
+    max-width: 100%;
+  }
+  .services {
+    padding: 15px;
+  }
+  .team {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .team img {
+    width: 150px;
+    height: 150px;
+  }
+  .team p {
+    width: 90%;
+  }
 }
